@@ -13,7 +13,7 @@ Course project for tsoha: I am always complaining about not knowing what to eat,
 * Vote if a recipe is good or bad
 * Search for recipes
   * Search by name / ingredient
-  * Sort by type / cuisine / price (estimate) / votes
+  * Sort by type / cuisine / price (estimate) / votes / time
   * Exclude recipes that include specific ingredients (allergies)
 * Comment on recipes and read comments left by others
   * Delete your comment
