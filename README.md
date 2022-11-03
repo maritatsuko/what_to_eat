@@ -1,6 +1,6 @@
 # What to eat
 
-Course project for tsoha: I am always complaining about now knowing what to eat, so I came up with this solution. How about a website that decides for me?
+Course project for tsoha: I am always complaining about not knowing what to eat, so I came up with this solution. How about a website that decides for me?
 
 **Features:**
 * Generate a random meal from a list of recipes
