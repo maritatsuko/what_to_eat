@@ -31,4 +31,3 @@ CREATE TABLE recipes {
     instructions TEXT,
 };
 
-

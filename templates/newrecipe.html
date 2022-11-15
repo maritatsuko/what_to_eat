@@ -1,0 +1,17 @@
+<form action="/create" method="POST">
+    <p>Name of the recipe:<br>
+    <input type="text" name="name"></p>
+    <p>Type of food:<br>
+    <input type="text" name="type"></p>
+    <p>How long will it take to make? <br>
+    <input type="number" name="cooktime"></p>
+    <p>Cost:<br>
+    <input type="radio" name="price" value="cheap" checked>Cheap
+    <input type="radio" name="price" value="expensive">Expensive</p>
+    <p>Ingredients:<br>
+    <input type="checkbox" name="ingredient" value="1">Egg
+    <input type="checkbox" name="ingredient" value="2">Salt</p>
+    <p>Instructions:<br>
+    <input type="text" name="instructions"></p>
+    <input type="submit" value="Submit recipe">
+</form>
