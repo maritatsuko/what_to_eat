@@ -27,7 +27,8 @@ CREATE TABLE recipes {
     type TEXT REFERENCES types,
     cooktime INTEGER,
     price TEXT,
-    ingredient REFERENCES ingredients
+    ingredient REFERENCES ingredients,
+    instructions TEXT,
 };
 
 
