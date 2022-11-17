@@ -5,19 +5,28 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = getenv("DATABASE_URL")
+app.secret_key = getenv("SECRET_KEY")
 db = SQLAlchemy(app)
 
 @app.route("/")
 def index():
     return render_template("index.html")
 
-@app.route("/login")
+@app.route("/login",methods=["GET","POST"])
 def login():
-    return render_template("login.html")
+    if request.method == "GET":
+        return render_template("login.html")
 
-@app.route("/test", methods=["POST"]) #remove this later, testing form
-def test():
-    return render_template("test.html", name=request.form["name"])
+    if request.method == "POST":
+        username = request.form["username"]
+        password = request.form["password"]
+        session["username"] = username
+        return redirect("/")
+
+@app.route("/logout")
+def logout():
+    del session["username"]
+    return redirect("/")
 
 @app.route("/register")
 def register():
@@ -34,7 +43,7 @@ def allrecipes():
 def newrecipe():
     return render_template("newrecipe.html")
 
-@app.route("/create", methods=["POST"])
+@app.route("/create",methods=["POST"])
 def create():
     name = request.form["name"]
     sql = "INSERT INTO recipes (name, type, cooktime, price, ingredient, instructions) VALUES (:name, type, cooktime, price, ingredient, instructions)"
