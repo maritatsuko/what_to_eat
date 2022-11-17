@@ -1,6 +1,6 @@
 CREATE TABLE users {
     id SERIAL PRIMARY KEY,
-    name TEXT,
+    username TEXT UNIQUE,
     password TEXT
 };
 
@@ -23,7 +23,7 @@ CREATE TABLE ingredients {
 CREATE TABLE recipes {
     id SERIAL PRIMARY KEY,
     creator_id INTEGER REFERENCES users,
-    name TEXT,
+    name TEXT UNIQUE,
     type TEXT REFERENCES types,
     cooktime INTEGER,
     price TEXT,
