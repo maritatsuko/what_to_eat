@@ -2,9 +2,13 @@
 
 Course project for tsoha: I am always complaining about not knowing what to eat, so I came up with this solution. How about a website that decides for me?
 
-**Features:**
+**Current features:**
+* Log in and out of your account
+* View the form for submitting a recipe
+
+**(future) Features:**
 * Generate a random meal from a list of recipes
-* Make an account, log in and out
+* Make an account
 * Save your favorite recipes
 * Add a new recipe to the public list
   * Edit your recipes
