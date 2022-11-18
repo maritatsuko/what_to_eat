@@ -1,26 +1,26 @@
-CREATE TABLE users {
+CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     username TEXT UNIQUE,
     password TEXT
-};
+);
 
-CREATE TABLE types {
+CREATE TABLE types (
     id SERIAL PRIMARY KEY,
     name TEXT
-};
+);
 
-CREATE TABLE diets {
+CREATE TABLE diets (
     id SERIAL PRIMARY KEY,
     name TEXT
-};
+);
 
-CREATE TABLE ingredients {
+CREATE TABLE ingredients (
     id SERIAL PRIMARY KEY,
     name TEXT,
     restriction REFERENCES diets,
-};
+);
 
-CREATE TABLE recipes {
+CREATE TABLE recipes (
     id SERIAL PRIMARY KEY,
     creator TEXT REFERENCES users,
     name TEXT UNIQUE,
@@ -29,4 +29,4 @@ CREATE TABLE recipes {
     price TEXT,
     ingredient REFERENCES ingredients,
     instructions TEXT,
-};
+);
