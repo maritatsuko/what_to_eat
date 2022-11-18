@@ -22,7 +22,7 @@ CREATE TABLE ingredients {
 
 CREATE TABLE recipes {
     id SERIAL PRIMARY KEY,
-    creator_id INTEGER REFERENCES users,
+    creator TEXT REFERENCES users,
     name TEXT UNIQUE,
     type TEXT REFERENCES types,
     cooktime INTEGER,
@@ -30,4 +30,3 @@ CREATE TABLE recipes {
     ingredient REFERENCES ingredients,
     instructions TEXT,
 };
-

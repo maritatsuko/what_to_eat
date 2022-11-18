@@ -1,6 +1,6 @@
 from app import app
 from flask import redirect, render_template, request, session
-import users
+import users, recipes
 
 
 @app.route("/")
@@ -44,18 +44,21 @@ def register():
 def newrecipe():
     return render_template("newrecipe.html")
 
-'''@app.route("/allrecipes")
+@app.route("/allrecipes")
 def allrecipes():
-    sql = "SELECT id, name, type FROM recipes"
-    result = db.session.execute(sql)
-    recipes = result.fetchall()
-    return render_template("allrecipes.html", recipes=recipes)'''
+    list = recipes.get_recipes()
+    return render_template("allrecipes.html", recipes=list)
 
-'''@app.route("/create",methods=["POST"])
+@app.route("/create",methods=["POST"])
 def create():
     name = request.form["name"]
-    sql = "INSERT INTO recipes (name, type, cooktime, price, ingredient, instructions) VALUES (:name, type, cooktime, price, ingredient, instructions)"
-    result = db.session.execute(sql, {"name":name})
-    db.session.commit()
-    return redirect("/allrecipes")'''
+    type = request.form["type"]
+    cooktime = request.form["cooktime"]
+    price = request.form["price"]
+    ingredients = request.form.getlist("ingredient")
+    instructions = request.form["instructions"]
+    if recipes.create(name, type, cooktime, price, ingredients, instructions):
+        return redirect("/allrecipes")
+    else:
+        return render_template("error.html", message="Something went wrong, could not post recipe.")
 

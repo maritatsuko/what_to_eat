@@ -1,7 +1,7 @@
 <hr>
 {% for recipe in recipes %}
-Name: {{ recipe.name }}
-Type: {{ recipe.type }} <br>
-<a href="/recipe/{{ recipe.id }}">Go to recipe</a>
+Name: {{ recipe[1] }}
+Type: {{ recipe[2] }} <br>
+<a href="/recipe/{{ recipe[0] }}">Go to recipe</a>
 <hr>
 {% endfor %}
