@@ -17,7 +17,7 @@ CREATE TABLE diets (
 CREATE TABLE ingredients (
     id SERIAL PRIMARY KEY,
     name TEXT,
-    restriction TEXT REFERENCES diets
+    restriction INTEGER REFERENCES diets
 );
 
 CREATE TABLE recipes (
