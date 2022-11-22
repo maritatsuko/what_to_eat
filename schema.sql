@@ -22,11 +22,11 @@ CREATE TABLE ingredients (
 
 CREATE TABLE recipes (
     id SERIAL PRIMARY KEY,
-    creator TEXT REFERENCES users,
+    creator INTEGER REFERENCES users,
     name TEXT UNIQUE,
-    type TEXT REFERENCES types,
+    type INTEGER REFERENCES types,
     cooktime INTEGER,
     price TEXT,
-    ingredient LIST REFERENCES ingredients,
-    instructions TEXT,
+    ingredient INTEGER REFERENCES ingredients,
+    instructions TEXT
 );
