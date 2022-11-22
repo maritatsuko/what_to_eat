@@ -10,6 +10,7 @@ def login(username, password):
         return False
     else:
         if check_password_hash(user[0], password):
+            session["user_id"] = user[1]
             session["username"] = username
             return True
         else:
@@ -27,3 +28,6 @@ def register(username, password):
 
 def username():
     return session.get("username")
+
+def user_id():
+    return session.get("user_id")
