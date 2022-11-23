@@ -12,3 +12,8 @@ def create(name, type, cooktime, price, ingredient, instructions):
     db.session.execute(sql, {"creator":creator, "name":name, "type":type, "cooktime":cooktime, "price":price, "ingredient":ingredient, "instructions":instructions})
     db.session.commit()
     return True
+
+def recipe(id):
+    sql = "SELECT * FROM recipes WHERE id=:id"
+    result = db.session.execute(sql, {"id":id})
+    return result.fetchall()

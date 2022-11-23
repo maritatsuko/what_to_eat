@@ -1,0 +1,11 @@
+<hr>
+{% for item in recipe %}
+Name: {{ item[2] }}
+Type: {{ item[3] }}
+Cooktime: {{ item[4] }}
+Price: {{ item[5] }} <br>
+Ingredients: {{ item[7] }} <br>
+Instructions: {{ item[6] }}
+<hr>
+{% endfor %}
+<a href="/allrecipes">Return to list</a>

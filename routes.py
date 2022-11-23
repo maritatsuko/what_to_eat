@@ -63,3 +63,7 @@ def create():
     else:
         return render_template("error.html", message="Something went wrong, could not post recipe.")
 
+@app.route("/recipe/<int:id>")
+def recipe(id):
+    list = recipes.recipe(id)
+    return render_template("recipe.html", recipe=list)

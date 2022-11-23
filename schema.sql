@@ -27,6 +27,6 @@ CREATE TABLE recipes (
     type INTEGER REFERENCES types,
     cooktime INTEGER,
     price TEXT,
-    ingredient TEXT[],
-    instructions TEXT
+    instructions TEXT,
+    ingredient TEXT[]
 );
