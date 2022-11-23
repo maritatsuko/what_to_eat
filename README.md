@@ -5,12 +5,15 @@ How about a website that decides for me?
 
 **Current features:**
 * Make an account, log in and out
-* View the form for submitting a recipe
+* Submit a recipe via form
+* View list of all recipes
+
 
 **(future) Features:**
 * Generate a random meal from a list of recipes
+* Every recipe should have its own page to view
 * Save your favorite recipes
-* Add a new recipe to the public list
+* After adding a recipe to the public list:
   * Edit your recipes
   * Delete your recipe
   * Delete a comment left on your recipe
