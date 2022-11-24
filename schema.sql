@@ -4,29 +4,30 @@ CREATE TABLE users (
     password TEXT
 );
 
-CREATE TABLE types (
-    id SERIAL PRIMARY KEY,
-    name TEXT
-);
+CREATE TYPE mealtype AS ENUM ('Breakfast', 'Meal', 'Snack', 'Dessert');
 
-CREATE TABLE diets (
-    id SERIAL PRIMARY KEY,
-    name TEXT
-);
+CREATE TYPE diets AS ENUM ('Vegan', 'Gluten free', 'No dairy', 'Meat', 'Fish');
 
 CREATE TABLE ingredients (
     id SERIAL PRIMARY KEY,
     name TEXT,
-    restriction INTEGER REFERENCES diets
+    restriction diets
 );
 
 CREATE TABLE recipes (
     id SERIAL PRIMARY KEY,
     creator INTEGER REFERENCES users,
     name TEXT UNIQUE,
-    type INTEGER REFERENCES types,
+    type mealtype,
     cooktime INTEGER,
     price TEXT,
     instructions TEXT,
     ingredient TEXT[]
+);
+
+CREATE TABLE comments (
+    id SERIAL PRIMARY KEY,
+    creator INTEGER REFERENCES users,
+    recipe INTEGER REFERENCES recipes,
+    comment TEXT
 );
