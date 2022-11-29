@@ -17,3 +17,8 @@ def recipe(id):
     sql = "SELECT * FROM recipes WHERE id=:id"
     result = db.session.execute(sql, {"id":id})
     return result.fetchall()
+
+def randomrecipe():
+    sql = "SELECT id FROM recipes ORDER BY RANDOM() LIMIT 1"
+    result = db.session.execute(sql)
+    return result.fetchone()
