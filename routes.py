@@ -1,5 +1,5 @@
 from app import app
-from flask import redirect, render_template, request, session
+from flask import redirect, render_template, request, session, abort
 import users, recipes
 
 
@@ -25,6 +25,7 @@ def login():
 def logout():
     del session["username"]
     del session["user_id"]
+    del session["csfr_token"]
     return redirect("/")
 
 @app.route("/register",methods=["GET","POST"])
@@ -53,6 +54,8 @@ def allrecipes():
 
 @app.route("/create",methods=["POST"])
 def create():
+    #if session["csfr_token"] != request.form["csfr_token"]:
+        #return render_template("error.html", message="Something went wrong, could not post recipe.")
     name = request.form["name"]
     type = request.form["type"]
     cooktime = request.form["cooktime"]
