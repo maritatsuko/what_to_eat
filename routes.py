@@ -5,8 +5,12 @@ import users, recipes
 
 @app.route("/")
 def index():
+    return render_template("index.html")
+
+@app.route("/random",methods=["POST"])
+def random():
     recipe = recipes.randomrecipe()
-    return render_template("index.html", recipe=recipe)
+    return render_template("recipe.html",recipe=recipe)
 
 @app.route("/login",methods=["GET","POST"])
 def login():

@@ -21,4 +21,6 @@ def recipe(id):
 def randomrecipe():
     sql = "SELECT id FROM recipes ORDER BY RANDOM() LIMIT 1"
     result = db.session.execute(sql)
+    if result is None:
+        return 0
     return result.fetchone()

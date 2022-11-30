@@ -1,9 +1,9 @@
 <title>What to eat?</title>
 <h1>What to eat?</h1>
 <i>Get a random recipe from here:</i>
-{% for item in recipe %}
-<a href="/recipe/{{ recipe[0] }}">Go to recipe</a><br>
-{% endfor %} 
+<form action="/random" method="POST">
+    <input type="submit" value="Random recipe">
+</form>
 <i>Check out all the recipes!</i>
 <a href="/allrecipes">All recipes</a> <br>
 <a href="/newrecipe">Share a new recipe</a> <br>
