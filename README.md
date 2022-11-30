@@ -11,14 +11,14 @@ How about a website that decides for me?
 
 
 **(future) Features:**
-* Save your favorite recipes
+* Save your favorite recipes (PRIORITY)
 * After adding a recipe to the public list:
   * Edit your recipes
   * Delete your recipe
   * Delete a comment left on your recipe
-* Vote if a recipe is good or bad
+* Vote if a recipe is good or bad (PRIORITY)
 * Search for recipes
-  * Search by name / ingredient
+  * Search by name / ingredient (PRIORITY)
   * Sort by type / cuisine / price (estimate) / votes / time
   * Exclude recipes that include specific ingredients (allergies)
 * Comment on recipes and read comments left by others
