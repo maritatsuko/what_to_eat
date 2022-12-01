@@ -75,3 +75,7 @@ def create():
 def recipe(id):
     list = recipes.recipe(id)
     return render_template("recipe.html", recipe=list)
+
+@app.route("/recipe/<int:id>/voting",methods=["POST"])
+def vote():
+    return render_template("voting.html")
