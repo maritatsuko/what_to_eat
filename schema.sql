@@ -36,5 +36,5 @@ CREATE TABLE votes (
     id SERIAL PRIMARY KEY,
     user_id INTEGER REFERENCES users,
     recipe_id INTEGER REFERENCES recipes,
-    vote VARCHAR(2)
+    vote INTEGER
 );

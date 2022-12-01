@@ -31,3 +31,13 @@ def voting(recipe_id,vote):
     db.session.execute(sql, {"user_id":user_id, "recipe_id":recipe_id, "vote":vote})
     db.session.commit()
     return True
+
+def count_votes(id):
+    sql = "SELECT COUNT(recipe_id) FROM votes WHERE recipe_id=(:id)"
+    result = db.session.execute(sql, {"id":id})
+    if result is not None:
+        sql = "SELECT SUM(vote) FROM votes WHERE recipe_id=(:id)"
+        total = db.session.execute(sql, {"id":id})
+        return total.fetchone()
+    else:
+        return 0
