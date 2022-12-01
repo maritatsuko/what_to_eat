@@ -8,6 +8,8 @@ How about a website that decides for me?
 * Make an account, log in and out
 * Submit a recipe via form
 * View list of all recipes and every recipe separately
+* Vote if a recipe is good or bad
+  * Current ratings can be seen from individual recipe pages
 
 
 **(future) Features:**
@@ -16,7 +18,6 @@ How about a website that decides for me?
   * Edit your recipes
   * Delete your recipe
   * Delete a comment left on your recipe
-* Vote if a recipe is good or bad (PRIORITY)
 * Search for recipes
   * Search by name / ingredient (PRIORITY)
   * Sort by type / cuisine / price (estimate) / votes / time
