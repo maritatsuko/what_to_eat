@@ -76,6 +76,15 @@ def recipe(id):
     list = recipes.recipe(id)
     return render_template("recipe.html", recipe=list)
 
-@app.route("/recipe/<int:id>/voting",methods=["POST"])
-def vote():
-    return render_template("voting.html")
+@app.route("/recipe/<int:id>/voting",methods=["GET", "POST"])
+def voting(id):
+    if request.method == "GET":
+        return render_template("voting.html", id=id)
+    if request.method == "POST":
+        recipe_id = id
+        vote = request.form["vote"]
+        if recipes.voting(recipe_id,vote):
+            list = recipes.recipe(recipe_id)
+            return render_template("recipe.html", recipe=list)
+        else:
+            return render_template("error.html", message="Something went wrong, could not vote.")

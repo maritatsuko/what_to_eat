@@ -1,6 +1,7 @@
 What did you think of the recipe?
-<form action="/vote" method="post">
-    <input type="radio" name="score" value="1"> It was good!
-    <input type="radio" name="score" value="-1"> I didn't like it...
+<form action="/recipe/{{ id }}/voting" method="post">
+    <input type="radio" name="vote" value="1"> It was good!
+    <input type="radio" name="vote" value="-1"> I didn't like it... <br>
+    <input type="hidden" name="id" value="{{ id }}">
     <input type="submit" value="Vote">
 </form>

@@ -7,6 +7,8 @@ Price: {{ item[5] }} <br>
 Ingredients: {{ item[7] }} <br>
 Instructions: {{ item[6] }}
 <hr>
+Like this recipe?
+<a href="/recipe/{{ item[0] }}/voting">Vote here!</a> <br>
 {% endfor %}
 <a href="/allrecipes">Return to list</a>
 <a href="/">Return to main page</a>
