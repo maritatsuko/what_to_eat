@@ -31,3 +31,10 @@ CREATE TABLE comments (
     recipe INTEGER REFERENCES recipes,
     comment TEXT
 );
+
+CREATE TABLE votes (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES users,
+    recipe_id INTEGER REFERENCES recipes,
+    vote VARCHAR(2)
+);
