@@ -14,7 +14,7 @@ def create(name, type, cooktime, price, ingredient, instructions):
     return True
 
 def recipe(id):
-    sql = "SELECT * FROM recipes WHERE id=:id"
+    sql = "SELECT * FROM recipes WHERE id=(:id)"
     result = db.session.execute(sql, {"id":id})
     return result.fetchall()
 
@@ -23,7 +23,7 @@ def randomrecipe():
     result = db.session.execute(sql)
     if result is None:
         return 0
-    return result.fetchone()
+    return result.fetchone()[0]
 
 def voting(recipe_id,vote):
     user_id = users.user_id()

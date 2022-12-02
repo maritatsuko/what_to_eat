@@ -1,5 +1,5 @@
 from app import app
-from flask import redirect, render_template, request, session, abort
+from flask import redirect, render_template, request, session, url_for, abort
 import users, recipes
 
 
@@ -9,8 +9,8 @@ def index():
 
 @app.route("/random",methods=["POST"])
 def random():
-    recipe = recipes.randomrecipe()
-    return render_template("recipe.html",recipe=recipe)
+    id = recipes.randomrecipe()
+    return recipe(id)
 
 @app.route("/login",methods=["GET","POST"])
 def login():
