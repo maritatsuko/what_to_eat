@@ -12,9 +12,9 @@ How about a website that decides for me?
   * Current ratings can be seen from individual recipe pages (a good vote is +1 and a bad vote is -1)
 
 **Ideas / things I'm working on:**
+* Adding a junction table to better handle recipe-ingredient relations
 * Switching the new recipe form ingredient part from checkboxes to a Select2 dropdown menu
   * There's currently 2 placeholder ingredients. Realistically, the number of ingredient options available will be bigger, so there's no point in presenting them as checkboxes, as that would take up the whole page. Also, a "regular" dropdown menu would not work, as there are multiple ingredients in a recipe and finding them all would be challenging. However, integrating select2 into this project might be above my current skill level. In that case, it would most likely be best just to have a text field in the form, and save the whole ingredient-list as a string and not enable searching by ingredients.
-* Adding a junction table to better handle recipe-ingredient relations
 
   * ALTERNATIVELY the ingredients section can be removed all-together and the whole project can be changed to a more simple approach: not adding recipes but instead just meal ideas, tagging them with the appropriate diet (vegan etc.), and adding a small description instead of instructions. Having proper recipes on the actual site would be ideal, but reducing it to something less complicated would still follow the main vision. That is, to simply give ideas when not wanting to make decisions.
  
