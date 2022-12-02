@@ -90,3 +90,7 @@ def voting(id):
             return render_template("recipe.html", recipe=list, current_votes=current_votes)
         else:
             return render_template("error.html", message="Something went wrong, could not vote.")
+
+@app.route("/test3")
+def test3():
+    return render_template("test3.html")
