@@ -6,7 +6,7 @@ How about a website that decides for me?
 **Current features:**
 * Generate a random meal from a list of recipes
 * Make an account, log in and out
-* Submit a recipe via form
+* Submit a recipe by filling out a form
 * View list of all recipes and every recipe separately
 * Vote if a recipe is good or bad
   * Current ratings can be seen from individual recipe pages (a good vote is +1 and a bad vote is -1)
