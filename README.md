@@ -30,6 +30,6 @@ How about a website that decides for me?
   * Exclude recipes that include specific ingredients (allergies)
 * Comment on recipes and read comments left by others
   * Delete your comment
-* Adding measures to ingredients when creating a recipe (1 or more carrots? 500 ml or 1 l of milk?)
+* Adding measurements to ingredients when creating a recipe (1 or more carrots? 500 ml or 1 l of milk?)
 
 (Disclaimer: not actual health advice, please consult a professional nutritionist/doctor if you have trouble eating)
