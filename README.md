@@ -27,8 +27,8 @@ How about a website that decides for me?
   * Delete your recipe
   * Delete a comment left on your recipe
 * Search for recipes
-  * Search by name (PRIORITY) / ingredient
-  * Sort by type (PRIORITY) / cuisine / price (estimate) / votes / time
+  * Search by name / ingredient
+  * Sort by mealtype (PRIORITY) / cuisine / price (estimate) / votes / time
   * Sort by diet (vegan / dairy free etc.) (PRIORITY)
   * Exclude recipes that include specific ingredients (allergies)
 * Comment on recipes and read comments left by others
