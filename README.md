@@ -22,7 +22,7 @@ How about a website that decides for me?
  
 * Csfr verification
 
-**(future) Features:**
+**To be added (maybe):**
 * Save your favorite recipes (PRIORITY)
 * After adding a recipe to the public list:
   * Edit your recipes
@@ -36,5 +36,6 @@ How about a website that decides for me?
 * Comment on recipes and read comments left by others
   * Delete your comment
 * Adding measurements to ingredients when creating a recipe (1 or more carrots? 500 ml or 1 l of milk?)
+* A more eyepleasing user interface
 
 (Disclaimer: not actual health advice, please consult a professional nutritionist/doctor if you have trouble eating)
