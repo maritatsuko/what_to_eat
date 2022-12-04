@@ -9,7 +9,7 @@ def index():
 
 @app.route("/random",methods=["POST"])
 def random():
-    id = recipes.randomrecipe()
+    id = recipes.random_recipe()
     return recipe(id)
 
 @app.route("/login",methods=["GET","POST"])
@@ -47,14 +47,20 @@ def register():
         else:
             render_template("error.html", message="Registration failed, please try again.")
 
-@app.route("/newrecipe")
-def newrecipe():
-    return render_template("newrecipe.html")
+@app.route("/mealtype",methods=["POST"])
+def mealtype_recipes():
+    mealtype = request.form["mealtype"]
+    list = recipes.mealtype_recipes(mealtype)
+    return render_template("allrecipes.html", recipes=list)
 
 @app.route("/allrecipes")
 def allrecipes():
     list = recipes.get_recipes()
     return render_template("allrecipes.html", recipes=list)
+
+@app.route("/newrecipe")
+def newrecipe():
+    return render_template("newrecipe.html")
 
 @app.route("/create",methods=["POST"])
 def create():

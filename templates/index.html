@@ -7,6 +7,14 @@
 <i>Check out all the recipes!</i>
 <a href="/allrecipes">All recipes</a> <br>
 <a href="/newrecipe">Share a new recipe</a> <br>
+<i>Looking for breakfast? Maybe lunch?</i> <br>
+<form action="/mealtype" method="POST">
+    <input type="radio" name="mealtype" value="Breakfast" checked>Breakfast
+    <input type="radio" name="mealtype" value="Meal">Meal
+    <input type="radio" name="mealtype" value="Snack">Snack
+    <input type="radio" name="mealtype" value="Dessert">Dessert <br>
+    <input type="submit" value="Show list">
+</form>
 
 {% if session.username %}
 <p>Logged in as {{ session.username }}</p>

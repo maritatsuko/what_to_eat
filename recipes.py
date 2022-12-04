@@ -18,7 +18,12 @@ def recipe(id):
     result = db.session.execute(sql, {"id":id})
     return result.fetchall()
 
-def randomrecipe():
+def mealtype_recipes(mealtype):
+    sql = "SELECT id, name, type FROM recipes WHERE type=(:mealtype)"
+    result = db.session.execute(sql, {"mealtype":mealtype})
+    return result.fetchall()
+
+def random_recipe():
     sql = "SELECT id FROM recipes ORDER BY RANDOM() LIMIT 1"
     result = db.session.execute(sql)
     if result is None:
