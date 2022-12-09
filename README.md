@@ -19,8 +19,6 @@ How about a website that decides for me?
   [test3.html](templates/test3.html) has an simplified example of the select2 approach.
 
   * ALTERNATIVELY the ingredients section can be removed all-together and the whole project can be changed to a more simple approach: not adding recipes but instead just meal ideas, tagging them with the appropriate diet (vegan etc.), and adding a small description instead of instructions. Having proper recipes on the actual site would be ideal, but reducing it to something less complicated would still follow the main vision. That is, to simply give ideas when not wanting to make decisions.
- 
-* Csfr verification
 
 **To be added (maybe):**
 * Save your favorite recipes (PRIORITY)
