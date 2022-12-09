@@ -13,7 +13,7 @@ def login(username, password):
         if check_password_hash(user[0], password):
             session["user_id"] = user[1]
             session["username"] = username
-            session["csfr_token"] = token_hex(16)
+            session["csrf_token"] = token_hex(16)
             return True
         else:
             return False

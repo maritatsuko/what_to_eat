@@ -64,8 +64,8 @@ def newrecipe():
 
 @app.route("/create",methods=["POST"])
 def create():
-    #if session["csfr_token"] != request.form["csfr_token"]:
-        #return render_template("error.html", message="Something went wrong, could not post recipe.")
+    if session["csrf_token"] != request.form["csrf_token"]:
+        return render_template("error.html", message="Something went wrong, could not post recipe.")
     name = request.form["name"]
     type = request.form["type"]
     cooktime = request.form["cooktime"]
