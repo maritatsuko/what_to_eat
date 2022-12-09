@@ -29,7 +29,7 @@ def login():
 def logout():
     del session["username"]
     del session["user_id"]
-    del session["csfr_token"]
+    del session["csrf_token"]
     return redirect("/")
 
 @app.route("/register",methods=["GET","POST"])
