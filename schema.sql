@@ -8,12 +8,6 @@ CREATE TYPE mealtype AS ENUM ('Breakfast', 'Meal', 'Snack', 'Dessert');
 
 CREATE TYPE diets AS ENUM ('Vegan', 'Gluten free', 'No dairy', 'Meat', 'Fish');
 
-CREATE TABLE ingredients (
-    id SERIAL PRIMARY KEY,
-    name TEXT,
-    restriction diets
-);
-
 CREATE TABLE recipes (
     id SERIAL PRIMARY KEY,
     creator INTEGER REFERENCES users,
@@ -21,8 +15,8 @@ CREATE TABLE recipes (
     type mealtype,
     cooktime INTEGER,
     price TEXT,
-    instructions TEXT,
-    ingredient TEXT[]
+    description VARCHAR(300),
+    diet diets
 );
 
 CREATE TABLE comments (
