@@ -7,6 +7,8 @@ How about a website that decides for me?
 * Generate a random meal from the database
 * Make an account, log in and out
 * Submit a food by filling out a form
+* View your own profile page
+  * A list of foods you have posted
 * View list of all foods and each separately
 * View list of all foods of chosen mealtype (Breakfast, Meal, Snack, Dessert)
 * Vote if a food is good or bad

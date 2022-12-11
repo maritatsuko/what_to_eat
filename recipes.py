@@ -18,6 +18,11 @@ def recipe(id):
     result = db.session.execute(sql, {"id":id})
     return result.fetchall()
 
+def creator_recipes(creator):
+    sql = "SELECT id,name FROM recipes WHERE creator=(:creator)"
+    result = db.session.execute(sql,{"creator":creator})
+    return result.fetchall()
+
 def mealtype_recipes(mealtype):
     sql = "SELECT id, name, type FROM recipes WHERE type=(:mealtype)"
     result = db.session.execute(sql, {"mealtype":mealtype})

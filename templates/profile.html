@@ -2,7 +2,11 @@
 <p>Hi {{ session.username }}!</p>
 <a href="/logout">Log out</a>
 <p>Here are the foods you have posted!</p>
-
+<hr>
+{% for item in recipe %}
+<a href="/recipe/{{ item[0] }}">Go to page: {{ item[1] }}</a>
+<hr>
+{% endfor %}
 <p>Here are your favorites!</p>
 {% else %}
 <p>You are currently not logged in. To view your profile, please log in first:</p>

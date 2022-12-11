@@ -49,7 +49,9 @@ def register():
 
 @app.route("/profile")
 def profile():
-    return render_template("profile.html")
+    id = users.user_id()
+    list = recipes.creator_recipes(id)
+    return render_template("profile.html", recipe=list)
 
 @app.route("/mealtype",methods=["POST"])
 def mealtype_recipes():
