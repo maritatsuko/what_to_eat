@@ -4,36 +4,42 @@ Course project for tsoha: I am always complaining about not knowing what to eat,
 How about a website that decides for me?
 
 **Current features:**
-* Generate a random meal from a list of recipes
+* Generate a random meal from the database
 * Make an account, log in and out
-* Submit a recipe by filling out a form
-* View list of all recipes and every recipe separately
-* View list of all recipes of chosen mealtype (Breakfast, Meal, Snack, Dessert)
-* Vote if a recipe is good or bad
-  * Current ratings can be seen from individual recipe pages (a good vote is +1 and a bad vote is -1)
+* Submit a food by filling out a form
+* View list of all foods and each separately
+* View list of all foods of chosen mealtype (Breakfast, Meal, Snack, Dessert)
+* Vote if a food is good or bad
+  * Current ratings can be seen from individual food pages (a good vote is +1 and a bad vote is -1)
 
-**Ideas / things I'm working on:**
-* Adding a junction table to better handle recipe-ingredient relations
-* Switching the new recipe form ingredient part from checkboxes to a [Select2 dropdown menu](https://select2.org/getting-started/basic-usage)
-  * There's currently 2 placeholder ingredients. Realistically, the number of ingredient options available will be bigger, so there's no point in presenting them as checkboxes, as that would take up the whole page. Also, a "regular" dropdown menu would not work, as there are multiple ingredients in a recipe and finding them all would be challenging. However, integrating select2 into this project might be above my current skill level. In that case, it would most likely be best just to have a text field in the form, and save the whole ingredient-list as a string and not enable searching by ingredients.
+**Comments:**
+* Currently the foods have been changed from recipes to just ideas with small descriptions. Having proper recipes on the actual site would be ideal, but reducing it to something less complicated is still following the main vision. That is, to simply give ideas when not wanting to make decisions.
+
+* If I had proper recipes, I would have liked to switch the new recipe form ingredient part from checkboxes to a [Select2 dropdown menu](https://select2.org/getting-started/basic-usage)
+  * There were only 2 placeholder ingredients before. Realistically, the number of ingredient options available would be bigger, so there's would be no point in presenting them as checkboxes, as that would have taken the whole page. Also, a "regular" dropdown menu would've not worked, as there are multiple ingredients per recipe and finding them all would've been too challenging and not user-friendly. However, integrating select2 into this project might have been above my current skill level and as this is a course project, it would have taken me too much time.
   [test3.html](templates/test3.html) has an simplified example of the select2 approach.
+  * Adding a junction table to better handle recipe-ingredient relations
 
-  * ALTERNATIVELY the ingredients section can be removed all-together and the whole project can be changed to a more simple approach: not adding recipes but instead just meal ideas, tagging them with the appropriate diet (vegan etc.), and adding a small description instead of instructions. Having proper recipes on the actual site would be ideal, but reducing it to something less complicated would still follow the main vision. That is, to simply give ideas when not wanting to make decisions.
 
 **To be added (maybe):**
-* Save your favorite recipes (PRIORITY)
-* After adding a recipe to the public list:
-  * Edit your recipes
-  * Delete your recipe
-  * Delete a comment left on your recipe
-* Search for recipes
-  * Search by name / ingredient
-  * Sort by cuisine / price (estimate) / votes / time
+* Save your favorite foods (PRIORITY)
+* After adding a food to the public list:
+  * Edit your contributions
+  * Delete your posts
+  * Delete a comment left on your post
+* Search for foods
+  * Search by name
+  * Sort by price (estimate) / votes / time
   * Sort by diet (vegan / dairy free etc.) (PRIORITY)
-  * Exclude recipes that include specific ingredients (allergies)
-* Comment on recipes and read comments left by others
+  * Exclude foods that are of a specific diet
+* Comment on food pages and read comments left by others
   * Delete your comment
-* Adding measurements to ingredients when creating a recipe (1 or more carrots? 500 ml or 1 l of milk?)
 * A more eyepleasing user interface
+
+**What would have been nice:**
+* Search by ingredient
+* Exclude recipes that include specific ingredients (allergies)
+* Sort by cuisine
+* Adding measurements to ingredients when creating a recipe (1 or more carrots? 500 ml or 1 l of milk?)
 
 (Disclaimer: not actual health advice, please consult a professional nutritionist/doctor if you have trouble eating)
