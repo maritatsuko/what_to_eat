@@ -18,6 +18,7 @@
 
 {% if session.username %}
 <p>Logged in as {{ session.username }}</p>
+<a href="/profile">Go to your profile</a>
 <a href="/logout">Log out</a>
 {% else %}
 <a href="/login">Login</a>

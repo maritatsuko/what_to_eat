@@ -47,6 +47,10 @@ def register():
         else:
             render_template("error.html", message="Registration failed, please try again.")
 
+@app.route("/profile")
+def profile():
+    return render_template("profile.html")
+
 @app.route("/mealtype",methods=["POST"])
 def mealtype_recipes():
     mealtype = request.form["mealtype"]
