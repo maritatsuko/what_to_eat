@@ -16,7 +16,7 @@ CREATE TABLE recipes (
     cooktime INTEGER,
     price TEXT,
     description VARCHAR(300),
-    diet diets
+    diet TEXT[]
 );
 
 CREATE TABLE comments (

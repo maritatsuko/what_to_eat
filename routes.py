@@ -70,9 +70,9 @@ def create():
     type = request.form["type"]
     cooktime = request.form["cooktime"]
     price = request.form["price"]
-    ingredients = request.form.getlist("ingredient")
-    instructions = request.form["instructions"]
-    if recipes.create(name, type, cooktime, price, ingredients, instructions):
+    diet = request.form.getlist("diet")
+    description = request.form["description"]
+    if recipes.create(name, type, cooktime, price, diet, description):
         return redirect("/allrecipes")
     else:
         return render_template("error.html", message="Something went wrong, could not post recipe.")

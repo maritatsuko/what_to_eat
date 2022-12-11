@@ -6,10 +6,10 @@ def get_recipes():
     result = db.session.execute(sql)
     return result.fetchall()
 
-def create(name, type, cooktime, price, ingredient, instructions):
+def create(name, type, cooktime, price, diet, description):
     creator = users.user_id()
-    sql = "INSERT INTO recipes (creator, name, type, cooktime, price, ingredient, instructions) VALUES (:creator, :name, :type, :cooktime, :price, :ingredient, :instructions)"
-    db.session.execute(sql, {"creator":creator, "name":name, "type":type, "cooktime":cooktime, "price":price, "ingredient":ingredient, "instructions":instructions})
+    sql = "INSERT INTO recipes (creator, name, type, cooktime, price, description, diet) VALUES (:creator, :name, :type, :cooktime, :price, :description, :diet)"
+    db.session.execute(sql, {"creator":creator, "name":name, "type":type, "cooktime":cooktime, "price":price, "description":description, "diet":diet})
     db.session.commit()
     return True
 
