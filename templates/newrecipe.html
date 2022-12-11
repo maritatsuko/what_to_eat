@@ -2,7 +2,7 @@
 <p>Logged in as {{ session.username }}</p>
 
 <form action="/create" method="POST">
-    <p>Name of the recipe:<br>
+    <p>Name of the food:<br>
     <input type="text" name="name"></p>
     <p>Type of food:<br>
     <input type="radio" name="type" value="Breakfast" checked>Breakfast
@@ -14,11 +14,14 @@
     <p>Cost:<br>
     <input type="radio" name="price" value="cheap" checked>Cheap
     <input type="radio" name="price" value="expensive">Expensive</p>
-    <p>Ingredients:<br>
-    <input type="checkbox" name="ingredient" value="1">Egg
-    <input type="checkbox" name="ingredient" value="2">Salt</p>
-    <p>Instructions:<br>
-    <input type="text" name="instructions"></p>
+    <p>What type of diet does this food fit?<br>
+    <input type="checkbox" name="diet" value="Vegan">Vegan
+    <input type="checkbox" name="diet" value="Gluten free">Gluten free
+    <input type="checkbox" name="diet" value="No dairy">Dairy free
+    <input type="checkbox" name="diet" value="Meat">Meat
+    <input type="checkbox" name="diet" value="Fish">Fish</p>
+    <p>Describe this food (less than 300 characters):<br>
+    <input type="text" name="description"></p>
     <input type="submit" value="Submit recipe">
 
     <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
