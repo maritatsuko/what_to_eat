@@ -32,3 +32,9 @@ CREATE TABLE votes (
     recipe_id INTEGER REFERENCES recipes,
     vote INTEGER
 );
+
+CREATE TABLE favorites (
+    user_id INTEGER REFERENCES users,
+    recipe_id INTEGER REFERENCES recipes,
+    favorite BOOLEAN
+);
