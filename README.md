@@ -9,10 +9,12 @@ How about a website that decides for me?
 * Submit a food by filling out a form
 * View your own profile page
   * A list of foods you have posted
+  * A list of foods you have saved as favorite (bugs: does not show recipe names)
 * View list of all foods and each separately
 * View list of all foods of chosen mealtype (Breakfast, Meal, Snack, Dessert)
 * Vote if a food is good or bad
   * Current ratings can be seen from individual food pages (a good vote is +1 and a bad vote is -1)
+* Save food as favorite (bugs: can save same food multiple times)
 
 **Comments:**
 * Currently the foods have been changed from recipes to just ideas with small descriptions. Having proper recipes on the actual site would be ideal, but reducing it to something less complicated is still following the main vision. That is, to simply give ideas when not wanting to make decisions.
@@ -24,7 +26,6 @@ How about a website that decides for me?
 
 
 **To be added (maybe):**
-* Save your favorite foods (PRIORITY)
 * After adding a food to the public list:
   * Edit your contributions
   * Delete your posts
@@ -34,9 +35,9 @@ How about a website that decides for me?
   * Sort by price (estimate) / votes / time
   * Sort by diet (vegan / dairy free etc.) (PRIORITY)
   * Exclude foods that are of a specific diet
-* Comment on food pages and read comments left by others
+* Comment on food pages and read comments left by others (PRIORITY)
   * Delete your comment
-* A more eyepleasing user interface
+* A more eyepleasing user interface (PRIORITY)
 
 **What would have been nice:**
 * Search by ingredient
