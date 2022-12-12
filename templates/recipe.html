@@ -7,7 +7,12 @@ Price: {{ item[5] }} <br>
 Diets: {{ item[7] }} <br>
 Description: {{ item[6] }}
 <hr>
-Like this recipe?
+Like this recipe?<br>
+<form action="/favorite" method="POST">
+    <input type="submit" value="Save to favorites">
+    <input type="hidden" name="id" value="{{ item[0] }}">
+    <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
+</form>
 <a href="/recipe/{{ item[0] }}/voting">Vote here!</a> <br>
 {% endfor %}
 Current score from votes:

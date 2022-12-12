@@ -8,6 +8,10 @@
 <hr>
 {% endfor %}
 <p>Here are your favorites!</p>
+{% for item in faves %}
+<a href="/recipe/{{ item[1] }}">Go to page: {{ item[1] }}</a>
+<hr>
+{% endfor %}
 {% else %}
 <p>You are currently not logged in. To view your profile, please log in first:</p>
 <a href="/login">Login</a>

@@ -1,6 +1,6 @@
 from app import app
 from flask import redirect, render_template, request, session, url_for, abort
-import users, recipes
+import users, recipes, favorites
 
 
 @app.route("/")
@@ -50,8 +50,9 @@ def register():
 @app.route("/profile")
 def profile():
     id = users.user_id()
-    list = recipes.creator_recipes(id)
-    return render_template("profile.html", recipe=list)
+    recipe_list = recipes.creator_recipes(id)
+    fave_list = favorites.user_favorites(id)
+    return render_template("profile.html", recipe=recipe_list, faves=fave_list)
 
 @app.route("/mealtype",methods=["POST"])
 def mealtype_recipes():
@@ -87,7 +88,20 @@ def create():
 def recipe(id):
     list = recipes.recipe(id)
     current_votes = recipes.count_votes(id)
-    return render_template("recipe.html", recipe=list, current_votes=current_votes)
+    user = users.user_id()
+    fave = favorites.is_favorite(user,id)
+    return render_template("recipe.html", recipe=list, current_votes=current_votes, fave=fave)
+
+@app.route("/favorite",methods=["POST"])
+def favorite():
+    if session["csrf_token"] != request.form["csrf_token"]:
+        return render_template("error.html", message="Something went wrong, could not save to favorites.")
+    recipe_id = request.form["id"]
+    user_id = users.user_id()
+    if favorites.add_favorite(user_id,recipe_id):
+        return recipe(recipe_id)
+    else:
+        return render_template("error.html", message="Something went wrong, could not save to favorites.")
 
 @app.route("/recipe/<int:id>/voting",methods=["GET", "POST"])
 def voting(id):
