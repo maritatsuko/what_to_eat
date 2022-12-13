@@ -35,7 +35,7 @@ def random_recipe():
         return 0
     return result.fetchone()[0]
 
-def voting(recipe_id,vote):
+def voting(recipe_id, vote):
     user_id = users.user_id()
     sql = "INSERT INTO votes (user_id, recipe_id, vote) VALUES (:user_id, :recipe_id, :vote)"
     db.session.execute(sql, {"user_id":user_id, "recipe_id":recipe_id, "vote":vote})

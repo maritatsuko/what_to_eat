@@ -14,8 +14,10 @@ Like this recipe?<br>
     <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
 </form>
 <a href="/recipe/{{ item[0] }}/voting">Vote here!</a> <br>
-{% endfor %}
 Current score from votes:
 {{ current_votes[0] }} <br>
 <a href="/allrecipes">Return to list</a>
-<a href="/">Return to main page</a>
+<a href="/">Return to main page</a> <br>
+
+<a href="/recipe/{{ item[0] }}/comment">Post a new comment:</a>
+{% endfor %}

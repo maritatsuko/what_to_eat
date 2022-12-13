@@ -1,6 +1,6 @@
 from app import app
 from flask import redirect, render_template, request, session, url_for, abort
-import users, recipes, favorites
+import users, recipes, favorites, comments
 
 
 @app.route("/")
@@ -116,6 +116,21 @@ def voting(id):
             return render_template("recipe.html", recipe=list, current_votes=current_votes)
         else:
             return render_template("error.html", message="Something went wrong, could not vote.")
+
+@app.route("/recipe/<int:id>/comment",methods=["GET","POST"])
+def comment(id):
+    if request.method == "GET":
+        return render_template("comment.html", id=id)
+    if request.method == "POST":
+        if session["csrf_token"] != request.form["csrf_token"]:
+            return render_template("error.html", message="Something went wrong, could not post comment.")
+        recipe_id = id
+        comment = request.form["comment"]
+        if comments.add_comment(recipe_id, comment):
+            return recipe(recipe_id)
+        else:
+            return render_template("error.html", message="Something went wrong, could not post comment.")
+
 
 @app.route("/test3")
 def test3():

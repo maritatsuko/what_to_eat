@@ -1,0 +1,14 @@
+{% if session.username %}
+<p>Logged in as {{ session.username }}</p>
+<p>Write a new comment here:</p>
+<form action="/recipe/{{ id }}/comment" method="POST">
+    <input type="text" name="comment"> <br>
+    <input type="submit" value="Post comment">
+    <input type="hidden" name="recipe" value="{{ id }}">
+    <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
+</form>
+{% else %}
+<p>To post a comment, please log in first:</p>
+<a href="/login">Login</a>
+<a href="/register">Register</a>
+{% endif %}
