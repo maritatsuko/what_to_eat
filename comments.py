@@ -9,6 +9,6 @@ def add_comment(recipe, comment):
     return True
 
 def get_comments(recipe):
-    sql = "SELECT id, creator, comment FROM comments WHERE recipe=(:recipe) ORDER BY id"
+    sql = "SELECT comments.id, users.username, comments.comment FROM comments, users WHERE comments.recipe=(:recipe) AND comments.creator = users.id ORDER BY id"
     result = db.session.execute(sql, {"recipe":recipe})
     return result.fetchall()
