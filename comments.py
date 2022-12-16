@@ -1,5 +1,5 @@
 from db import db
-import users, recipes
+import users
 
 def add_comment(recipe, comment):
     creator = users.user_id()

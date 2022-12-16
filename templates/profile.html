@@ -10,7 +10,7 @@
 {% endfor %}
 <p>Here are your favorites!</p>
 {% for item in faves %}
-<a href="/recipe/{{ item[1] }}">Go to page: {{ item[1] }}</a>
+<a href="/recipe/{{ item[0] }}">Go to page: {{ item[1] }}</a>
 <hr>
 {% endfor %}
 {% else %}
