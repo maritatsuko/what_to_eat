@@ -9,7 +9,7 @@ How about a website that decides for me?
 * Submit a food by filling out a form
 * View your own profile page
   * A list of foods you have posted
-  * A list of foods you have saved as favorite (bugs: does not show recipe names)
+  * A list of foods you have saved as favorite
 * View list of all foods and each separately
 * View list of all foods of chosen mealtype (Breakfast, Meal, Snack, Dessert)
 * Vote if a food is good or bad
