@@ -112,9 +112,7 @@ def voting(id):
         recipe_id = id
         vote = request.form["vote"]
         if recipes.voting(recipe_id,vote):
-            list = recipes.recipe(recipe_id)
-            current_votes = recipes.count_votes(recipe_id)
-            return render_template("recipe.html", recipe=list, current_votes=current_votes)
+            return recipe(recipe_id)
         else:
             return render_template("error.html", message="Something went wrong, could not vote.")
 
