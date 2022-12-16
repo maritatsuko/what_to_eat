@@ -90,7 +90,8 @@ def recipe(id):
     current_votes = recipes.count_votes(id)
     user = users.user_id()
     fave = favorites.is_favorite(user,id)
-    return render_template("recipe.html", recipe=list, current_votes=current_votes, fave=fave)
+    discussion = comments.get_comments(id)
+    return render_template("recipe.html", recipe=list, current_votes=current_votes, fave=fave, discussion=discussion)
 
 @app.route("/favorite",methods=["POST"])
 def favorite():
