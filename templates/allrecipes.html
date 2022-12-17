@@ -3,8 +3,10 @@
 
 <hr>
 {% for recipe in recipes %}
-Name: {{ recipe[1] }}
-Type: {{ recipe[2] }} <br>
+<div class="nametype">
+    Name: {{ recipe[1] }},
+    Type: {{ recipe[2] }}
+</div>
 <a href="/recipe/{{ recipe[0] }}">Go to recipe</a>
 <hr>
 {% endfor %}

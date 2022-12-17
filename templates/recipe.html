@@ -1,7 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<hr>
 {% for item in recipe %}
 Name: {{ item[2] }}
 Type: {{ item[3] }}
@@ -23,10 +22,10 @@ Current score from votes:
 {{ current_votes[0] }} <br>
 <a href="/allrecipes">Return to list</a>
 <a href="/">Return to main page</a> <br>
-
+<hr>
+<h2>Comments:</h2>
 <a href="/recipe/{{ item[0] }}/comment">Post a new comment:</a> <br>
 {% endfor %}
-<p>Comments:</p>
 <hr>
 {% for comment in discussion %}
 Posted by: {{ comment[1] }} <br>

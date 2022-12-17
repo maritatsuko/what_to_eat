@@ -3,7 +3,9 @@
 
 <a href="/">Return to main page</a>
 {% if session.username %}
-<p>Hi {{ session.username }}!</p>
+<div class="greeting">
+    <p>Hi {{ session.username }}!</p>
+</div>
 <a href="/logout">Log out</a>
 <p>Here are the foods you have posted!</p>
 <hr>

@@ -3,7 +3,7 @@
 
 What did you think of the recipe?
 <form action="/recipe/{{ id }}/voting" method="POST">
-    <input type="radio" name="vote" value="1"> It was good!
+    <input type="radio" name="vote" value="1" checked> It was good!
     <input type="radio" name="vote" value="-1"> I didn't like it... <br>
     <input type="hidden" name="id" value="{{ id }}">
     <input type="submit" value="Vote">
