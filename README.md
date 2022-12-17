@@ -5,26 +5,17 @@ How about a website that decides for me?
 
 **Current features:**
 * Generate a random meal from the database
-* Make an account, log in and out
 * Submit a food by filling out a form
+* Make an account, log in and out
 * View your own profile page
   * A list of foods you have posted
   * A list of foods you have saved as favorite
 * View list of all foods and each separately
 * View list of all foods of chosen mealtype (Breakfast, Meal, Snack, Dessert)
 * Vote if a food is good or bad
-  * Current ratings can be seen from individual food pages (a good vote is +1 and a bad vote is -1)
+  * Current score rating can be seen from individual food pages (a good vote is +1 and a bad vote is -1 to the score)
 * Save food as favorite (bugs: can save same food multiple times)
 * Comment on food pages and read comments left by others
-
-**Comments:**
-* Currently the foods have been changed from recipes to just ideas with small descriptions. Having proper recipes on the actual site would be ideal, but reducing it to something less complicated is still following the main vision. That is, to simply give ideas when not wanting to make decisions.
-
-* If I had proper recipes, I would have liked to switch the new recipe form ingredient part from checkboxes to a [Select2 dropdown menu](https://select2.org/getting-started/basic-usage)
-  * There were only 2 placeholder ingredients before. Realistically, the number of ingredient options available would be bigger, so there's would be no point in presenting them as checkboxes, as that would have taken the whole page. Also, a "regular" dropdown menu would've not worked, as there are multiple ingredients per recipe and finding them all would've been too challenging and not user-friendly. However, integrating select2 into this project might have been above my current skill level and as this is a course project, it would have taken me too much time.
-  [test3.html](templates/test3.html) has an simplified example of the select2 approach.
-  * Adding a junction table to better handle recipe-ingredient relations
-
 
 **To be added (maybe):**
 * After adding a food to the public list:
@@ -40,10 +31,14 @@ How about a website that decides for me?
   * Exclude foods that are of a specific diet
 * A more eyepleasing user interface (PRIORITY)
 
-**What would have been nice:**
+**What would have been nice and other comments:**
+
+* Originally I wanted to have proper recipies for each food added, but I ended up changing to just smaller descriptions per food. Adding ingredients by using a form with select2, and modifying the data between the database and the form just seemed way too complicated for now. Personally, I do think this was a good problem to run into, as I had to come up with other ideas and let the project adapt throughout the development. Unfortunately, due to some personal issues, I had to leave a bunch of other features out. However, I do think this was still a succesful project and I'll definitely be using the app, maybe even improving it in the future! I'd also like to publish this, as the app definitely works best with a community, where everyone can share their favorite meals. I'll update on that part once I, or the instructors for next year's course, find a free way to do that :D. Here are some of the features I had planned but didn't make it:
+
+* Sort by cuisine
+* If I had proper recipes, I would have liked to use a [Select2 dropdown menu](https://select2.org/getting-started/basic-usage) for adding ingredients
 * Search by ingredient
 * Exclude recipes that include specific ingredients (allergies)
-* Sort by cuisine
 * Adding measurements to ingredients when creating a recipe (1 or more carrots? 500 ml or 1 l of milk?)
 
 (Disclaimer: not actual health advice, please consult a professional nutritionist/doctor if you have trouble eating)
