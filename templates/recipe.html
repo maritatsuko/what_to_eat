@@ -10,6 +10,7 @@ Price: {{ item[5] }} <br>
 Diets: {{ item[7] }} <br>
 Description: {{ item[6] }}
 <hr>
+{% if session.username %}
 Like this recipe?<br>
 <form action="/favorite" method="POST">
     <input type="submit" value="Save to favorites">
@@ -17,6 +18,7 @@ Like this recipe?<br>
     <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
 </form>
 <a href="/recipe/{{ item[0] }}/voting">Vote here!</a> <br>
+{% endif %}
 Current score from votes:
 {{ current_votes[0] }} <br>
 <a href="/allrecipes">Return to list</a>
@@ -24,6 +26,7 @@ Current score from votes:
 
 <a href="/recipe/{{ item[0] }}/comment">Post a new comment:</a> <br>
 {% endfor %}
+<p>Comments:</p>
 <hr>
 {% for comment in discussion %}
 Posted by: {{ comment[1] }} <br>
