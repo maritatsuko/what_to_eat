@@ -1,3 +1,6 @@
+{% extends "layout.html" %}
+{% block content %}
+
 {% if session.username %}
 <p>Logged in as {{ session.username }}</p>
 
@@ -33,3 +36,5 @@
 <a href="/register">Register</a>
 {% endif %}
 <br><a href="/">Return to main page</a>
+
+{% endblock %}

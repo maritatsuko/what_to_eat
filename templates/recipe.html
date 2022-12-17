@@ -1,3 +1,6 @@
+{% extends "layout.html" %}
+{% block content %}
+
 <hr>
 {% for item in recipe %}
 Name: {{ item[2] }}
@@ -27,3 +30,5 @@ Posted by: {{ comment[1] }} <br>
 {{ comment[2] }} <br>
 <hr>
 {% endfor %}
+
+{% endblock %}

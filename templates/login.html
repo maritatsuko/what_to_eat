@@ -1,3 +1,6 @@
+{% extends "layout.html" %}
+{% block content %}
+
 <form action="/login" method="POST">
     <p>Username:
     <input type="text" name="username"></p>
@@ -9,3 +12,5 @@
 <p>Don't have an account?</p>
 <a href="/register">Register</a><br>
 <a href="/">Return to main page</a>
+
+{% endblock %}

@@ -1,3 +1,6 @@
+{% extends "layout.html" %}
+{% block content %}
+
 <hr>
 {% for recipe in recipes %}
 Name: {{ recipe[1] }}
@@ -6,3 +9,5 @@ Type: {{ recipe[2] }} <br>
 <hr>
 {% endfor %}
 <a href="/">Return</a>
+
+{% endblock %}

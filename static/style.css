@@ -1,0 +1,21 @@
+body {
+    margin: 25px 100px 50px 25px;
+    background-color: ivory;
+    font-size: large;
+}
+
+.header {
+    background-color: #478c5c;
+    color: ivory;
+    padding: 20px;
+    margin: 25px 100xp 50px 25px;
+    border-radius: 1em;
+}
+
+input[type=submit] {
+    background-color: #478c5c;
+    color: ivory;
+    padding: 8px;
+    border-radius: 1.5em;
+    font-size: medium;
+}
