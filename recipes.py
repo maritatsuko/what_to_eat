@@ -20,7 +20,7 @@ def recipe(id):
 
 def creator_recipes(creator):
     sql = "SELECT id,name FROM recipes WHERE creator=(:creator)"
-    result = db.session.execute(sql,{"creator":creator})
+    result = db.session.execute(sql, {"creator":creator})
     return result.fetchall()
 
 def mealtype_recipes(mealtype):
@@ -51,3 +51,4 @@ def count_votes(id):
         return total.fetchone()
     else:
         return 0
+        

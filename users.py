@@ -33,3 +33,4 @@ def username():
 
 def user_id():
     return session.get("user_id")
+    

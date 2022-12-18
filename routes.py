@@ -7,12 +7,12 @@ import users, recipes, favorites, comments
 def index():
     return render_template("index.html")
 
-@app.route("/random",methods=["POST"])
+@app.route("/random", methods=["POST"])
 def random():
     id = recipes.random_recipe()
     return recipe(id)
 
-@app.route("/login",methods=["GET","POST"])
+@app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "GET":
         return render_template("login.html")
@@ -32,7 +32,7 @@ def logout():
     del session["csrf_token"]
     return redirect("/")
 
-@app.route("/register",methods=["GET","POST"])
+@app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "GET":
         return render_template("register.html")
@@ -54,7 +54,7 @@ def profile():
     fave_list = favorites.user_favorites(id)
     return render_template("profile.html", recipe=recipe_list, faves=fave_list)
 
-@app.route("/mealtype",methods=["POST"])
+@app.route("/mealtype", methods=["POST"])
 def mealtype_recipes():
     mealtype = request.form["mealtype"]
     list = recipes.mealtype_recipes(mealtype)
@@ -69,7 +69,7 @@ def allrecipes():
 def newrecipe():
     return render_template("newrecipe.html")
 
-@app.route("/create",methods=["POST"])
+@app.route("/create", methods=["POST"])
 def create():
     if session["csrf_token"] != request.form["csrf_token"]:
         return render_template("error.html", message="Something went wrong, could not post recipe.")
@@ -93,30 +93,30 @@ def recipe(id):
     discussion = comments.get_comments(id)
     return render_template("recipe.html", recipe=list, current_votes=current_votes, fave=fave, discussion=discussion)
 
-@app.route("/favorite",methods=["POST"])
+@app.route("/favorite", methods=["POST"])
 def favorite():
     if session["csrf_token"] != request.form["csrf_token"]:
         return render_template("error.html", message="Something went wrong, could not save to favorites.")
     recipe_id = request.form["id"]
     user_id = users.user_id()
-    if favorites.add_favorite(user_id,recipe_id):
+    if favorites.add_favorite(user_id, recipe_id):
         return recipe(recipe_id)
     else:
         return render_template("error.html", message="Something went wrong, could not save to favorites.")
 
-@app.route("/recipe/<int:id>/voting",methods=["GET", "POST"])
+@app.route("/recipe/<int:id>/voting", methods=["GET", "POST"])
 def voting(id):
     if request.method == "GET":
         return render_template("voting.html", id=id)
     if request.method == "POST":
         recipe_id = id
         vote = request.form["vote"]
-        if recipes.voting(recipe_id,vote):
+        if recipes.voting(recipe_id, vote):
             return recipe(recipe_id)
         else:
             return render_template("error.html", message="Something went wrong, could not vote.")
 
-@app.route("/recipe/<int:id>/comment",methods=["GET","POST"])
+@app.route("/recipe/<int:id>/comment", methods=["GET", "POST"])
 def comment(id):
     if request.method == "GET":
         return render_template("comment.html", id=id)
@@ -129,8 +129,3 @@ def comment(id):
             return recipe(recipe_id)
         else:
             return render_template("error.html", message="Something went wrong, could not post comment.")
-
-
-@app.route("/test3")
-def test3():
-    return render_template("test3.html")

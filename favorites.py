@@ -17,3 +17,4 @@ def user_favorites(user_id):
     sql = "SELECT DISTINCT favorites.recipe_id, recipes.name FROM favorites, recipes WHERE favorites.user_id=(:user_id) AND favorites.recipe_id = recipes.id"
     result = db.session.execute(sql, {"user_id":user_id})
     return result.fetchall()
+    
