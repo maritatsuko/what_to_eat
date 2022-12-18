@@ -35,6 +35,7 @@ hr {
 
 .nametype {
     background-color: #b2d2a4;
+    color: black;
     padding: 10px;
     margin-bottom: 5px;
 }
@@ -47,5 +48,12 @@ hr {
     font-size: large;
     float: left;
     margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.profile {
+    background-color: #cef0c0;
+    color: black;
+    padding: 10px;
     margin-bottom: 5px;
 }

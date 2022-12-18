@@ -10,12 +10,17 @@
 <p>Here are the foods you have posted!</p>
 <hr>
 {% for item in recipe %}
-<a href="/recipe/{{ item[0] }}">Go to page: {{ item[1] }}</a>
+<div class="profile">
+    <a href="/recipe/{{ item[0] }}">{{ item[1] }}</a>
+</div>
 <hr>
 {% endfor %}
 <p>Here are your favorites!</p>
+<hr>
 {% for item in faves %}
-<a href="/recipe/{{ item[0] }}">Go to page: {{ item[1] }}</a>
+<div class="profile">
+    <a href="/recipe/{{ item[0] }}">{{ item[1] }}</a>
+</div>
 <hr>
 {% endfor %}
 {% else %}
