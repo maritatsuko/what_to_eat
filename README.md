@@ -44,6 +44,7 @@ flask run
 
 **What would have been nice and other comments:**
 
+* There is quite a lot of empty space on the right-hand side of all the pages, as I planned the design to also fit vertical screens.
 * I do think this was a succesful project and I'll definitely be using the app, maybe even improving it in the future! I'd also like to publish this, as the app definitely works best with a community, where everyone can share their favorite meals. I'll update on that part once I, or the instructors for next year's course, find a free way to do that :D. Here are some of the features I had planned but didn't make it:
 
 * Edit posts and comments
