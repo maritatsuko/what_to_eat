@@ -31,15 +31,20 @@ source venv/bin/activate
 ```
 pip install -r requirements.txt
 ```
-5. Start postgresql database on another terminal tab
-6. Start the program on the first tab
+5. Create .env file and in the file `SECRET_KEY=` and `DATABASE_URL=` variables
+6. Start postgresql database on another terminal tab
+7. On the first tab run
+```
+psql < schema.sql
+```
+8. and finally start the program on the first tab by typing
 ```
 flask run
 ```
 
 **What would have been nice and other comments:**
 
-* Originally I wanted to have proper recipies for each food added, but I ended up changing to just smaller descriptions per food. Adding ingredients by using a form with select2, and modifying the data between the database and the form just seemed way too complicated for now. Personally, I do think this was a good problem to run into, as I had to come up with other ideas and let the project adapt throughout the development. Unfortunately, due to some personal issues, I had to leave a bunch of other features out. However, I do think this was still a succesful project and I'll definitely be using the app, maybe even improving it in the future! I'd also like to publish this, as the app definitely works best with a community, where everyone can share their favorite meals. I'll update on that part once I, or the instructors for next year's course, find a free way to do that :D. Here are some of the features I had planned but didn't make it:
+* I do think this was a succesful project and I'll definitely be using the app, maybe even improving it in the future! I'd also like to publish this, as the app definitely works best with a community, where everyone can share their favorite meals. I'll update on that part once I, or the instructors for next year's course, find a free way to do that :D. Here are some of the features I had planned but didn't make it:
 
 * Edit posts and comments
 * Delete posts and comments
