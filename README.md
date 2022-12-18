@@ -14,8 +14,28 @@ How about a website that decides for me?
 * View list of all foods of chosen mealtype (Breakfast, Meal, Snack, Dessert)
 * Vote if a food is good or bad
   * Current score rating can be seen from individual food pages (a good vote is +1 and a bad vote is -1 to the score)
-* Save food as favorite (bugs: can save same food multiple times)
+* Save food as favorite (bugs: a food can be saved multiple times by each user)
 * Comment on food pages and read comments left by others
+
+**Installation:**
+1. Clone repository onto your local device
+2. Create virtual environment for the program in the same folder
+```
+python3 -m venv venv 
+```
+3. Activate the environment
+```
+source venv/bin/activate
+```
+4. Install dependencies
+```
+pip install -r requirements.txt
+```
+5. Start postgresql database on another terminal tab
+6. Start the program on the first tab
+```
+flask run
+```
 
 **To be added (maybe):**
 * After adding a food to the public list:
@@ -27,9 +47,8 @@ How about a website that decides for me?
 * Search for foods
   * Search by name
   * Sort by price (estimate) / votes / time
-  * Sort by diet (vegan / dairy free etc.) (PRIORITY)
+  * Sort by diet (vegan / dairy free etc.)
   * Exclude foods that are of a specific diet
-* A more eyepleasing user interface (PRIORITY)
 
 **What would have been nice and other comments:**
 
