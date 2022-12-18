@@ -6,14 +6,14 @@
 
 <form action="/create" method="POST">
     <p>Name of the food:<br>
-    <input type="text" name="name"></p>
+    <input type="text" name="name" required></p>
     <p>Type of food:<br>
     <input type="radio" name="type" value="Breakfast" checked>Breakfast
     <input type="radio" name="type" value="Meal">Meal
     <input type="radio" name="type" value="Snack">Snack
     <input type="radio" name="type" value="Dessert">Dessert</p>
     <p>How long will it take to make? <br>
-    <input type="number" name="cooktime"></p>
+    <input type="number" name="cooktime" required></p>
     <p>Cost:<br>
     <input type="radio" name="price" value="cheap" checked>Cheap
     <input type="radio" name="price" value="expensive">Expensive</p>
@@ -24,7 +24,7 @@
     <input type="checkbox" name="diet" value="Meat">Meat
     <input type="checkbox" name="diet" value="Fish">Fish</p>
     <p>Describe this food (less than 300 characters):<br>
-    <input type="text" name="description"></p>
+    <textarea name="description" rows="3" cols="40" required></textarea></p>
     <input type="submit" value="Submit recipe">
 
     <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
