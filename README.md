@@ -37,27 +37,17 @@ pip install -r requirements.txt
 flask run
 ```
 
-**To be added (maybe):**
-* After adding a food to the public list:
-  * Edit your posts
-  * Delete your posts
-* Comments
-  * Delete your own comment
-  * Delete a comment left on your post
-* Search for foods
-  * Search by name
-  * Sort by price (estimate) / votes / time
-  * Sort by diet (vegan / dairy free etc.)
-  * Exclude foods that are of a specific diet
-
 **What would have been nice and other comments:**
 
 * Originally I wanted to have proper recipies for each food added, but I ended up changing to just smaller descriptions per food. Adding ingredients by using a form with select2, and modifying the data between the database and the form just seemed way too complicated for now. Personally, I do think this was a good problem to run into, as I had to come up with other ideas and let the project adapt throughout the development. Unfortunately, due to some personal issues, I had to leave a bunch of other features out. However, I do think this was still a succesful project and I'll definitely be using the app, maybe even improving it in the future! I'd also like to publish this, as the app definitely works best with a community, where everyone can share their favorite meals. I'll update on that part once I, or the instructors for next year's course, find a free way to do that :D. Here are some of the features I had planned but didn't make it:
 
-* Sort by cuisine
+* Edit posts and comments
+* Delete posts and comments
+* Sort by cuisine/ price (estimate) / votes / time / diet
 * If I had proper recipes, I would have liked to use a [Select2 dropdown menu](https://select2.org/getting-started/basic-usage) for adding ingredients
-* Search by ingredient
+* Search by ingredient and name
 * Exclude recipes that include specific ingredients (allergies)
+* Exclude foods that are of a specific diet
 * Adding measurements to ingredients when creating a recipe (1 or more carrots? 500 ml or 1 l of milk?)
 
 (Disclaimer: not actual health advice, please consult a professional nutritionist/doctor if you have trouble eating)
